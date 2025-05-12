@@ -4,7 +4,7 @@ import React from 'react'
 function ProjectsPage() {
   return (
     <div
-      style={{backgroundImage:"url(mountains.jpg)"}}
+      style={{backgroundImage:"url(/Mountains.jpg)"}}
       className='min-h-screen w-full flex items-center justify-center bg-center bg-cover py-24'>
       <div className='container mx-auto px-4'>
         
@@ -63,22 +63,7 @@ function ProjectsPage() {
             ]}
             githubLink="https://github.com/moncompte/mobile-app"
           />
-          <ProjectCard
-            title="Algorithme de Prédiction"
-            description="Un modèle de machine learning pour prédire les tendances de marché."
-            technologies={["Python", "TensorFlow", "Pandas"]}
-            projectType="Data Science"
-            features={[
-              "Précision de 92%",
-              "Optimisé pour CPU et GPU",
-              "Importation de données automatisée"
-            ]}
-            stats={[
-              {label: "Dataset", value: "50K entrées"},
-              {label: "Temps d'entraînement", value: "2.3h"}
-            ]}
-            githubLink="https://github.com/moncompte/prediction-modele"
-          />
+          
           
         </div>
       </div>

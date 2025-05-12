@@ -1,4 +1,4 @@
-import { NextRequest , NextResponse } from 'next/server'
+import { NextRequest  } from 'next/server'
 import { readFile } from 'fs/promises';
 import path from 'path'
 
@@ -22,12 +22,14 @@ export async function POST(req:NextRequest){
                     content:question
                 }
             ],
-            stream:false
+            stream:true
         })
         
     });
-    const data =await res.json();
-    const reply = data.message?.content || "Je n'ai pas compris.";
-    return NextResponse.json({reply})
-
+   return new Response(res.body,{
+    headers:{
+        'Content-Type':'text/plain',
+        'Transfer-Encoding':'chunked',
+    }
+   })
 }

@@ -2,11 +2,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React , {useEffect, useState } from 'react'
-import { Home, Boxes, Mail,Wrench } from "lucide-react";
+import { Home, Boxes, Mail,Wrench, User } from "lucide-react";
 import Transitions from './Transitions';
 
 const NavLinks = [
     { name: "Home", link: "/", icon: Home },
+    { name: "About", link: "/aboutMe", icon: User },
     { name: "Projects", link: "/projects", icon: Boxes },
     { name: "Skills" , link:"/skills" , icon: Wrench},
     { name: "Contact", link: "/contact", icon: Mail },
@@ -33,13 +34,13 @@ const Navigation = () => {
     })
   return (
     <div style={{left:"20%"}}
-    className='absolute z-[9999] -bottom-20 w-[50%] md:w-[20%] max-h-[150px] bg-black rounded-full flex justify-between items-center border border-white  py-7'>
+    className='absolute z-[9999] -bottom-0 w-[50%] md:w-[20%] max-h-[100px] bg-black rounded-t-full flex justify-between items-center border border-white '>
         {isRouting && <Transitions/>}
         {NavLinks.map((nav)=>(
             <Link
             key={nav.name}
             href={nav.link}
-            className='mb-16 pl-4 min-w-[20%]'
+           className='flex justify-center items-center min-w-[20%] py-2 mt-6'
             >
                 <nav.icon className={`w-[24px] h-[24px] ${path===nav.link? "text-purple-800":"text-white"}`}/>
             </Link>

@@ -4,18 +4,27 @@ import React from 'react'
 function ProjectsPage() {
   return (
     <div
-      style={{backgroundImage:"url(/mountains.jpg)"}}
+      style={{backgroundImage:"url(mountains.jpg)"}}
       className='min-h-screen w-full flex items-center justify-center bg-center bg-cover py-24'>
       <div className='container mx-auto px-4'>
         
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto'>
           <ProjectCard
-            title="Blog Application"
-            description="Une plateforme de blogging complète avec WYSIWYG editor."
-            imageUrl="/images/blog-preview.jpg"
-            technologies={["Next.js", "MongoDB", "Tailwind"]}
-            projectType="Web App"
-            liveLink="https://monblog.com"
+            title="Asthma Risk"
+            description="Development of an asthma risk prediction application combining a machine learning model (Random Forest) trained on clinical data with real-time weather data from the OpenWeatherMap API. Integration of a caching system, calculation of weather-related risk factors, and evaluation of the combined probability of an asthma attack."
+            imageUrl="asthma.png"
+            technologies={["joblib", "scikit-learn", "pandas", "NumPy","React" ,"Tailwind"]}
+            projectType="AI application"
+            features={[
+              "Machine Learning Integration: Trained a Random Forest model on clinical data to predict asthma risk.",
+              "Real-Time Weather Data: Fetched and integrated live meteorological data using the OpenWeatherMap API.",
+              "Combined Risk Evaluation: Merged clinical and environmental factors to compute the overall probability of an asthma attack.",
+              "Caching System: Implemented a cache mechanism to reduce redundant API calls and improve performance.",
+              "Risk Factor Computation: Analyzed specific weather indicators (e.g. humidity, temperature, air quality) to quantify their impact on asthma.",
+              "Modular Architecture: Designed the application with a clean separation between data collection, processing, prediction, and UI layers.",
+              "User Interface (optional): (If applicable) Developed a user-friendly interface for displaying risk levels and weather insights."
+            ]}
+            
             githubLink="https://github.com/moncompte/blog"
           />
           <ProjectCard

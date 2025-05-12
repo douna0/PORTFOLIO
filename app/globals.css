@@ -11,6 +11,7 @@
 body {
   overflow-x: hidden;
   overflow-y: auto;
+  overscroll-behavior: none;
 }
 
 .flip-card-inner {
@@ -48,3 +49,4 @@ body {
   right: 0;
   z-index: 50; /* Assurez-vous que c'est une valeur suffisamment élevée */
 }
+

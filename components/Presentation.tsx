@@ -5,7 +5,7 @@ const Presentation=() =>{
     <div className='text-gray-300 rounded-lg p-4 flex relative mb-4'
     style={{ backgroundColor: 'rgba(31, 41, 55, 0.4)' }}>
 
-        <p >Hi, I`m Thaha, a third-year Computer Science student at the University of Avignon. Alongside my studies, I work as an independent full-stack web and mobile developer based in France. I have contributed to various major projects, including SaaS platforms, e-commerce sites, mobile and web games, and real-time chat systems. While I specialize in the MERN stack, I am highly versatile and quickly adapt to other technologies.</p>
+        <p >Hi, I’m Hanane Boudlal, a third-year Computer Science student at the University of Avignon. After starting in dental school in Algeria, I switched to computer science in France, driven by my passion for math and AI. I’m especially interested in combining AI with healthcare, and I’ve worked on projects involving data analysis, prediction models, and intelligent web applications. I’m also building skills in web development to make AI more accessible through real-world tools.</p>
       
     </div>
   )

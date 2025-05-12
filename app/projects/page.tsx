@@ -19,21 +19,40 @@ function ProjectsPage() {
             githubLink="https://github.com/moncompte/blog"
           />
           <ProjectCard
-            title="API de Gestion de Contacts"
-            description="Une API RESTful pour gérer des contacts avec authentification et validation."
-            technologies={["Express", "MongoDB", "JWT"]}
-            projectType="RESTful API"
+            title="Handling Missing Data (Heart Disease Dataset)"
+            description="A data science project focused on analyzing and handling missing values in a medical dataset (heart disease). Various imputation and deletion techniques were applied and evaluated using classification models like Random Forest and XGBoost."
+            technologies={["Pandas" , "Numpy", "scikit-learn", "xgboost", "missingno", "matplotlib"]}
+            projectType="Data Science"
             features={[
-              "Authentification par JWT",
-              "Validation de données",
-              "Rate limiting",
-              "Documentation Swagger"
+              "Analyzed missing data using statistics and visual tools (missingno)",
+              "Applied multiple imputation strategies: mean, median, constant, KNN, , Forward Fill - Backward Fill - Linear Interpolation , linear regression(random forest).",
+              "Used deletion methods: Pairwise , Listewise , dropping entire column.",
+              "Trained and evaluated models to compare accuracy across methods."
             ]}
             stats={[
-              {label: "Endpoints", value: "24"},
-              {label: "Tests", value: "97% couverture"}
+              {label: "Dataset", value: "1K entrées"},
             ]}
+            
             githubLink="https://github.com/moncompte/api-contacts"
+          />
+          <ProjectCard
+            title=" Fake News Detection – Text Classification"
+            description="Developed a binary classifier to detect fake news from real news using text data. The project included full preprocessing of text, feature engineering, and model comparison."
+            technologies={["Python", "NLTK", "spaCy", "scikit-learn", "matplotlib"]}
+            projectType="Data Science"
+            features={[
+              "Analyzed dataset and class distribution (Fake vs Real).",
+              "Cleaned and normalized text (stopword removal, stemming, lemmatization).",
+              "Extracted linguistic features (POS tagging: nouns, verbs, adjectives).",
+              "Represented text as vectors using CountVectorizer.",
+              "Trained multiple models: Logistic Regression, Decision Trees, Random Forest, Voting Classifier.",
+              "Applied cross-validation (KFold) for model robustness.",
+              "Evaluated each method using precision and recall metrics."
+            ]}
+            stats={[
+              {label: "Dataset", value: "6K entrées"},
+            ]}
+            githubLink="https://github.com/moncompte/mobile-app"
           />
           <ProjectCard
             title="Algorithme de Prédiction"
@@ -51,19 +70,7 @@ function ProjectsPage() {
             ]}
             githubLink="https://github.com/moncompte/prediction-modele"
           />
-          <ProjectCard
-            title="Application Mobile"
-            description="Une application mobile pour suivre vos habitudes quotidiennes et améliorer votre productivité."
-            imageUrl="/images/mobile-app.jpg"
-            technologies={["React Native", "Firebase", "Redux"]}
-            projectType="Mobile App"
-            features={[
-              "Mode hors ligne",
-              "Notifications personnalisées",
-              "Synchronisation multi-appareils"
-            ]}
-            githubLink="https://github.com/moncompte/mobile-app"
-          />
+          
         </div>
       </div>
     </div>

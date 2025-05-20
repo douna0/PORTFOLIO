@@ -7,7 +7,7 @@ export async function POST(req:NextRequest){
     const  prompt=path.join(process.cwd(), 'app', 'chatbot', 'hanane-infos.txt');
     
     const systemPrompt=await readFile(prompt,'utf-8');
-    const res = await fetch('http://localhost:11434/api/chat',{
+    const res = await fetch('https://ollama.gamathel.fr',{
         method : 'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({
